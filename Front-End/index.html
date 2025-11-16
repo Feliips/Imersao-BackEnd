@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InstaBytes — Galeria de Imagens com IA</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/byte.ico"
+    />
+    <meta
+      name="description"
+      content="InstaBytes: galeria moderna de imagens com descrições geradas automaticamente por IA (Google Gemini). Veja e compartilhe fotos com tecnologia avançada."
+    />
+    <meta
+      name="keywords"
+      content="galeria, imagens, IA, Gemini, fotografia, minimalista"
+    />
+    <meta name="author" content="Alura — Imersão Backend" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo-section">
+          <div class="logo">Insta<strong>bytes</strong></div>
+          <p class="logo-subtitle">Galeria com IA</p>
+        </div>
+        <div class="nav-links">
+          <button
+            id="theme-toggle"
+            class="login-btn"
+            aria-label="Alternar entre tema claro e escuro"
+          >
+            ☀️
+          </button>
+          <button class="login-btn" aria-label="Fazer login">Entrar</button>
+          <a href="#" class="signup-link" aria-label="Criar nova conta"
+            >Cadastre-se</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-container">
+      <!-- Profile Header -->
+      <section class="profile-header">
+        <div class="profile-image-wrapper">
+          <img
+            src="photos/255861_original_1080x1993.jpg"
+            alt="Foto de perfil: jovem aventureiro observando a praia ao entardecer"
+            class="profile-pic"
+          />
+        </div>
+        <div class="profile-info">
+          <h1>Descubra Histórias em Imagens</h1>
+          <p class="profile-description">
+            Visualize uma coleção de fotos incríveis com descrições automáticas
+            geradas por Inteligência Artificial. Cada imagem conta uma história.
+          </p>
+          <div class="profile-stats">
+            <div class="stat">
+              <span class="stat-number" id="post-count">0</span>
+              <span class="stat-label">Fotos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Tecnologia</span>
+              <span class="stat-value">Google Gemini</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Upload Section -->
+      <section class="upload-section">
+        <h2 class="upload-title">Enviar Imagem</h2>
+        <p class="upload-subtitle">
+          Faça upload de uma imagem e deixe a IA gerar uma descrição automática
+        </p>
+
+        <div class="upload-container">
+          <div class="upload-drop-zone" id="dropZone">
+            <svg
+              class="upload-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <p class="upload-text">
+              Arraste uma imagem aqui ou clique para selecionar
+            </p>
+            <input
+              type="file"
+              id="imageInput"
+              class="upload-input"
+              accept="image/*"
+              aria-label="Selecionar imagem para upload"
+            />
+          </div>
+
+          <div class="upload-preview" id="preview" style="display: none">
+            <img id="previewImg" alt="Prévia da imagem" class="preview-image" />
+            <div class="preview-actions">
+              <button id="cancelBtn" class="btn btn-secondary">Cancelar</button>
+              <button id="uploadBtn" class="btn btn-primary">
+                Enviar e Gerar Descrição
+              </button>
+            </div>
+          </div>
+
+          <div class="upload-status" id="uploadStatus"></div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <h2 class="gallery-title">Galeria</h2>
+        <p class="gallery-subtitle">
+          Clique em qualquer imagem para ver a descrição completa gerada por IA
+        </p>
+        <div class="image-grid" id="image-grid"></div>
+      </section>
+
+      <!-- Footer Info -->
+      <section class="footer-info">
+        <p>
+          <strong>InstaBytes</strong> é um projeto de aprendizado da
+          <em>Imersão Backend da Alura</em> que demonstra integração de
+          tecnologias modernas: Node.js, Express, MongoDB e Google Generative
+          AI.
+        </p>
+      </section>
+    </main>
+
+    <!-- Modal for Full Image View -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog">
+      <div class="modal-overlay"></div>
+      <div class="modal-dialog">
+        <button class="modal-close" aria-label="Fechar modal">✕</button>
+        <img
+          class="modal-content"
+          id="modal-img"
+          alt="Imagem em tamanho ampliado"
+        />
+        <div class="modal-caption" id="caption"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="assets/js/themeToggle.js"></script>
+    <script type="module" src="assets/js/uploadManager.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
+  </body>
+</html>

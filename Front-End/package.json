@@ -1,8 +1,7 @@
 {
-  "name": "instabytes",
+  "name": "instabytes-frontend",
   "version": "1.0.0",
-  "description": "Galeria de imagens com descrições geradas automaticamente por IA (Gemini). Projeto da Imersão BackEnd - Alura.",
-  "main": "server.js",
+  "description": "Frontend da galeria InstaBytes - Interface para upload e visualização de imagens",
   "type": "module",
   "license": "MIT",
   "private": false,
@@ -19,11 +18,9 @@
   "keywords": [
     "galeria",
     "imagens",
-    "IA",
-    "gemini",
-    "node",
-    "express",
-    "mongodb"
+    "frontend",
+    "parcel",
+    "ui"
   ],
   "author": {
     "name": "Seu Nome",
@@ -31,14 +28,10 @@
     "url": "https://github.com/seu-usuario"
   },
   "scripts": {
-    "dev": "node --watch --env-file=.env server.js",
+    "dev": "npx parcel --port 8000 index.html",
     "test": ""
   },
-  "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "mongodb": "^7.0.0",
-    "multer": "^2.0.2"
+  "devDependencies": {
+    "parcel": "^2.12.0"
   }
 }

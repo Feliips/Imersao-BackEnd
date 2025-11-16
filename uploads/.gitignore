@@ -1,0 +1,4 @@
+# Ignore all uploaded images - they should not be committed to git
+*
+!.gitignore
+!.gitkeep
