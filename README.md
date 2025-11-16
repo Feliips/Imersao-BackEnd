@@ -96,20 +96,20 @@ A interface do InstaBytes em tema escuro mostrando a experiência completa:
 │ 1. Arraste uma imagem ou clique para enviar │
 ├─────────────────────────────────────────────┤
 │                                             │
-│  📁 Validação de arquivo (tipo e tamanho)  │
-│     └─> Máximo 10MB (PNG, JPG)            │
+│  Validação de arquivo (tipo e tamanho)      |
+│     └─> Máximo 10MB (PNG, JPG)              │
 │                                             │
-│  📤 Upload para servidor                   │
-│     └─> Armazenamento em /uploads          │
+│  Upload para servidor                       │
+│     └─> Armazenamento em /uploads           │
 │                                             │
-│  🤖 Análise com Gemini AI                  │
-│     └─> Geração de descrição em português  │
+│  Análise com Gemini AI                      │
+│     └─> Geração de descrição em português   │
 │                                             │
-│  💾 Salva em MongoDB Atlas                 │
-│     └─> Metadados + Descrição gerada       │
+│  Salva em MongoDB Atlas                     │
+│     └─> Metadados + Descrição gerada        │
 │                                             │
-│  ✅ Atualização em tempo real              │
-│     └─> Nova imagem aparece na galeria     │
+│  Atualização em tempo real                  │
+│     └─> Nova imagem aparece na galeria      │
 │                                             │
 └─────────────────────────────────────────────┘
 ```
@@ -121,15 +121,15 @@ A interface do InstaBytes em tema escuro mostrando a experiência completa:
 │                         INSTABYTES                              │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌──────────────────────────┐      ┌──────────────────────────┐│
-│  │   FRONTEND (Parcel)      │      │   BACKEND (Express)      ││
-│  │  http://localhost:8000   │◄────►│  http://localhost:3000   ││
-│  │                          │      │                          ││
-│  │ • Upload form            │      │ • GET /posts             ││
-│  │ • Gallery display        │      │ • POST /posts            ││
-│  │ • Image modal            │      │ • POST /upload           ││
-│  │ • Theme toggle           │      │ • PUT /upload/:id        ││
-│  └──────────────────────────┘      └──────────────┬───────────┘│
+│  ┌──────────────────────────┐      ┌──────────────────────────┐ │
+│  │   FRONTEND (Parcel)      │      │   BACKEND (Express)      │ │
+│  │  http://localhost:8000   │◄────►│  http://localhost:3000   │ │
+│  │                          │      │                          │ │
+│  │ • Upload form            │      │ • GET /posts             │ │
+│  │ • Gallery display        │      │ • POST /posts            │ │
+│  │ • Image modal            │      │ • POST /upload           │ │
+│  │ • Theme toggle           │      │ • PUT /upload/:id        │ │
+│  └──────────────────────────┘      └──────────────┬───────────┘ │
 │                                                   │             │
 │                                    ┌──────────────▼────────────┐│
 │                                    │  Google Generative AI     ││
