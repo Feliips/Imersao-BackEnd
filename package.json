@@ -10,13 +10,11 @@
     "node": ">= 14.0.0",
     "npm": ">= 6.0.0"
   },
-
   "homepage": "",
   "repository": {
     "type": "git",
     "url": ""
   },
-
   "bugs": "",
   "keywords": [],
   "author": {
@@ -24,16 +22,15 @@
     "email": "",
     "url": ""
   },
-
   "contributors": [],
   "scripts": {
     "dev": "node --watch --env-file=.env server.js",
     "test": ""
   },
-  
   "dependencies": {
     "es6": "^0.0.7",
     "express": "^5.1.0",
-    "mongodb": "^7.0.0"
+    "mongodb": "^7.0.0",
+    "multer": "^2.0.2"
   }
 }
